@@ -307,24 +307,14 @@ export default function EditCarStockPage() {
             <label className="text-gray-900 mb-2 block text-sm font-medium">
               Foto Mobil
             </label>
-            {car.image ? (
-              <img
-                src={`${BACKEND_URL}/storage/${car.image}`}
-                alt={car.name}
-                className="h-full w-full object-cover"
-              />
-            ) : (
-              <span className="text-gray-400">
-                Belum ada gambar
-              </span>
-            )}
-            {/* {currentImage && (
+
+            {currentImage && (
               <img
                 src={`${BACKEND_URL}/${currentImage}`}
                 alt="Foto mobil saat ini"
                 className="mb-4 h-40 w-60 rounded-lg object-cover"
               />
-            )} */}
+            )}
 
             <input
               type="file"
