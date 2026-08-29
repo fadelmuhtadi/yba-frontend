@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api-proxy/:path*",
-      "destination": "https://yba-carstcok.fwh.is/api-stok/public/api/:path*"
+      "destination": "https://yba-backend-production.up.railway.app/api/:path*"
     }
   ]
 }
