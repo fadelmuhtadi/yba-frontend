@@ -1,4 +1,5 @@
 "use client";
+const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'https://yba-backend-production.up.railway.app';
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -85,7 +86,7 @@ export default function CarStockDetailPage() {
           <div className="flex h-72 items-center justify-center bg-gray-100">
             {car.image ? (
               <img
-                src={`http://127.0.0.1:8000/storage/${car.image}`}
+                src={`http://${BACKEND_URL}storage/${car.image}`}
                 alt={car.name}
                 className="h-full w-full object-cover"
               />

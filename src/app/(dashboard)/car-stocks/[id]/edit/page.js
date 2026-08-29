@@ -1,4 +1,5 @@
 "use client";
+const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'https://yba-backend-production.up.railway.app';
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -309,7 +310,7 @@ export default function EditCarStockPage() {
 
             {currentImage && (
               <img
-                src={`http://127.0.0.1:8000/storage/${currentImage}`}
+                src={`${BACKEND_URL}/${currentImage}`}
                 alt="Foto mobil saat ini"
                 className="mb-4 h-40 w-60 rounded-lg object-cover"
               />
