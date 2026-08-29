@@ -310,7 +310,7 @@ export default function EditCarStockPage() {
 
             {currentImage && (
               <img
-                src={`${BACKEND_URL}/${currentImage}`}
+                src={`${BACKEND_URL}/storage/${car.image}`}
                 alt="Foto mobil saat ini"
                 className="mb-4 h-40 w-60 rounded-lg object-cover"
               />
