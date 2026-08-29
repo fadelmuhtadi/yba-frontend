@@ -211,9 +211,6 @@ export default function CarStockDetailPage() {
             </div>
           </div>
         </div>
-        <pre className="bg-gray-100 p-4 text-xs whitespace-pre-wrap mt-8">
-        {JSON.stringify(car, null, 2)}
-      </pre>
       </div>
     </main>
   );
