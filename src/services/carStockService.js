@@ -52,6 +52,7 @@ export async function updateCarStock(id, formData) {
 // getstock (id)
 export async function getCarStock(id) {
   const response = await fetch(`${API_URL}/${id}`);
+  
 
   if (!response.ok) {
     throw new Error("Data stok mobil tidak ditemukan");
@@ -76,7 +77,7 @@ export async function getCarStocks(page = 1, search = "", status = "") {
     params.append("status", status);
   }
 
-  const response = await fetch(`${API_URL}?${params.toString()}`);
+  const response = await fetch(`${API_URL}/car-stocks?${params.toString()}`);
 
   if (!response.ok) {
     throw new Error("Gagal mengambil data stok mobil");
