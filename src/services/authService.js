@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://yba-backend-production.up.railway.app/api';
 
 export async function login(username, password) {
   const response = await fetch(`${API_URL}/login`, {
