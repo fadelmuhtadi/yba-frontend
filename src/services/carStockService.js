@@ -3,7 +3,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://yba-backend-producti
 
 // delete carstock
 export async function deleteCarStock(id) {
-  const response = await fetch(`${API_URL}/${id}`, {
+  const response = await fetch(`${API_URL}/car-stocks/${id}`, {
     method: "DELETE",
   });
 
@@ -20,7 +20,7 @@ export async function deleteCarStock(id) {
 export async function updateCarStock(id, formData) {
   formData.append("_method", "PUT");
 
-  const response = await fetch(`${API_URL}/${id}`, {
+  const response = await fetch(`${API_URL}/car-stocks/${id}`, {
     method: "POST",
     body: formData,
   });
@@ -34,24 +34,9 @@ export async function updateCarStock(id, formData) {
   return response.json();
 }
 
-// export async function updateCarStock(id, formData) {
-//   const response = await fetch(`${API_URL}/${id}`, {
-//     method: "POST",
-//     body: formData,
-//   });
-
-//   if (!response.ok) {
-//     const error = await response.json();
-
-//     throw new Error(error.message || "Gagal memperbarui stok mobil");
-//   }
-
-//   return response.json();
-// }
-
 // getstock (id)
 export async function getCarStock(id) {
-  const response = await fetch(`${API_URL}/${id}`);
+  const response = await fetch(`${API_URL}/car-stocks/${id}`);
   
 
   if (!response.ok) {
