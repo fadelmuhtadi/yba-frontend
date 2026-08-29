@@ -10,7 +10,7 @@ export default function CarStockCard({ car }) {
       <div className="flex h-48 items-center justify-center bg-gray-100">
         {car.image ? (
           <img
-            src={`http://127.0.0.1:8000/storage/${car.image}`}
+            src={`${process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'https://yba-backend-production.up.railway.app'}/storage/${car.image}`}
             alt={car.name || "Mobil"}
             className="h-full w-full object-cover"
           />

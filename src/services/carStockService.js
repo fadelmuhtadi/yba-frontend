@@ -1,5 +1,5 @@
 // const API_URL = "http://127.0.0.1:8000/api/car-stocks";
-const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/car-stocks`;
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://yba-backend-production.up.railway.app/api';
 
 // delete carstock
 export async function deleteCarStock(id) {
